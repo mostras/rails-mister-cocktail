@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+
+puts "je suis dans le ficher"
+puts 4 + 5

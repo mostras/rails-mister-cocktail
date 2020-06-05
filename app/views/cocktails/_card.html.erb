@@ -1,9 +1,8 @@
-<%= link_to cocktail_path(cocktail) do  %>
-  <div class="card-cocktail">
-    <div>
-        <h2><%= cocktail.name %></h2>
-        <p><%= cocktail.doses.count %> ingredients in this cocktail.</p>
-    </div>
+<%= link_to cocktail_path(cocktail), class: 'card-cocktail', style: "background-image: url(#{ cl_image_path cocktail.picture.key })" do  %>
+  <div>
+      <h2><%= cocktail.name %></h2>
+      <p><%= cocktail.doses.count %> ingredients in this cocktail.</p>
+
   </div>
 <% end %>
 
