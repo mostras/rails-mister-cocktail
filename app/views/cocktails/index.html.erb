@@ -1,9 +1,15 @@
-<h1>Here are all your cocktails</h1>
+  <%= render 'navbar' %>
 
-<%= link_to 'Create new cocktail', new_cocktail_path %>
+<div class="cocktails">
 
-<% @cocktails.each do |cocktail| %>
-  <ul>
-     <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-   </ul>
-<% end %>
+  <div class="intro">
+    <h1>Welcome to my cocktail bar!</h1>
+    <p>Here is a list of my cocktails, feel free to create a new one if you want!</p>
+  </div>
+
+  <% @cocktails.each do |cocktail| %>
+    <ul>
+      <%= render 'card', cocktail: cocktail %>
+     </ul>
+  <% end %>
+</div>

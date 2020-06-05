@@ -6,7 +6,9 @@ url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 doc = open(url).read
 data = JSON.parse(doc)
 
-data["drinks"].each do |ingredient|
+ordered_data = data["drinks"].sort
+
+ordered_data.each do |ingredient|
   ingr = Ingredient.create(name: ingredient["strIngredient1"])
   puts "#{ingr.name} created !!"
 end

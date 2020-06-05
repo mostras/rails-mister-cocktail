@@ -1,0 +1,11 @@
+<%= link_to cocktail_path(cocktail) do  %>
+  <div class="card-cocktail">
+    <div>
+        <h2><%= cocktail.name %></h2>
+        <p><%= cocktail.doses.count %> ingredients in this cocktail.</p>
+    </div>
+  </div>
+<% end %>
+
+
+
